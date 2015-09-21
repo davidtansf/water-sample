@@ -1,14 +1,16 @@
 
-var app, WaterSample, a;
+var app, WaterSample;
 $(function() {
   app = {
+
+    storage: undefined,
 
     init: function() {
       $(".submit").on('submit',function(event) {
         event.preventDefault();
         var id = $(".input").val();
         if (id) {
-          a = new WaterSample(id);
+          app.storage = new WaterSample(id);
         }
        $(".input").val("");
       });
@@ -38,14 +40,24 @@ $(function() {
       $('#main').find('ul').html($results);
     },
 
-    displaySample: function(data) {
+    displaySample: function(data, flag) {
       var $results = [];
       _.each(data, function(value, key) {
         $whole = $('<p></p>').text(key + ": " + value);
         $results.push($whole);
       });
+      if (!flag) {
+        $factorbtn = $('<form class="factorsubmit"> \
+            <div id="factorbutton"><input id="factorButton" \
+            type="submit" value="Get Factor"></div></form>');
+        $results.push($factorbtn);
+      }
       $('#holder').attr('id','sample');
       $('#sample').find('ul').html($results);
+      $(".factorsubmit").on('submit',function(event) {
+        event.preventDefault();
+        app.displaySample(app.storage.to_hash(true), true);
+      });
     },
 
     getSample: function(id, callback) {
@@ -110,10 +122,11 @@ $(function() {
           this.bromoform = data.bromoform;
           this.bromodichloromethane = data.bromodichloromethane;
           this.dibromichloromethane = data.dibromichloromethane;
+          app.displaySample(this);
         } else {
           this.id = null;
+          app.displaySample(this, true);
         }
-        app.displaySample(this);
       }.bind(this));
     }.bind(this);
 
@@ -122,14 +135,12 @@ $(function() {
   };
 
   WaterSample.prototype.factor = function(factor_id) {
-
     return app.getFactor(factor_id, function(scheme) {
       if (scheme) {
         return this.calcFactor(this, JSON.parse(scheme));
       }
       return null;
     }.bind(this));
-
   };
 
   WaterSample.prototype.to_hash = function(flag) {

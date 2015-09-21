@@ -99,7 +99,7 @@ ul {
     border-width: 0 1px 1px 1px;
 }
 
-#submitButton {
+#submitButton, #factorButton {
     color: #f5edee;
     background-color: #A69894;
     float: left;
@@ -114,6 +114,9 @@ ul {
     outline-offset: -5px;
 }
 
+#factorButton {
+    width: 130px;
+}
 #wrapper {
     width: 700px;
     margin-left: auto;
