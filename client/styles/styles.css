@@ -1,0 +1,128 @@
+body {
+    background-image: -moz-radial-gradient(center, ellipse farthest-corner, #F2EAE2 0%, #ABA5A1 100%);
+    background-image: radial-gradient(ellipse farthest-corner at center, #F2EAE2 0%, #ABA5A1 100%);*/
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+}
+
+ul {
+    list-style: none;
+}
+
+#main {
+    width: 610px;
+    margin: 30px 20px 10px;
+    text-align: left;
+    border: solid #ddd;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font: 15px/30px Helvetica;
+}
+
+#main h1 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#main ul {
+    padding-left: 20px;
+}
+
+#main ul span {
+    font-size: 10px;
+    color: gray;
+    float: right;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#sample {
+    width: 320px;
+    margin: 10px 5px 20px;
+    text-align: left;
+    text-transform: capitalize;
+    padding: 20px 20px;
+    border: solid #ddd;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    float: left;
+    font: 14px/28px Helvetica;
+    color: #82756f;
+    background: #f5edee;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+#sample h1 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#sample ul {
+    padding-left: 10px;
+}
+
+#search {
+    width: 220px;
+    height: 125px;
+    margin: 10px 10px 5px;
+    text-align: left;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    font: 16px/24px Helvetica;
+    float: left;
+}
+
+#search h1 {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+#main, #search {
+    padding: 20px 40px 20px;
+    color: #82756f;
+    background: #f5edee;
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+#submitButton {
+    color: #f5edee;
+    background-color: #A69894;
+    float: left;
+    width: 100px;
+    height: 40px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    outline: 1px dashed #f5edee;
+    outline-offset: -5px;
+}
+
+#wrapper {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input {
+    width: 60px;
+    padding: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+}

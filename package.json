@@ -1,0 +1,10 @@
+{
+  "name": "water-sample",
+  "version": "0.0.0",
+  "main": "server/app.js",
+  "dependencies": {
+    "express": "^4.10.1",
+    "mysql": "^2.6.1",
+    "request": "^2.40.0"
+  }
+}

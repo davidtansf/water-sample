@@ -1,0 +1,21 @@
+{
+  "name": "water-sample",
+  "version": "0.0.0",
+  "authors": [
+    "David Tan <davidtansf@gmail.com>"
+  ],
+  "description": "LA water sample data",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.6",
+    "angular-ui-router": "~0.2.15"
+  }
+}

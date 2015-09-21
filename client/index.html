@@ -1,0 +1,29 @@
+
+<!doctype html>
+<html ng-app="water">
+  <head>
+    <meta charset="utf-8">
+    <title>LA Water Sample</title>
+    <script src="lib/jquery/jquery-1.9.1.js"></script>
+    <script src="lib/underscore/underscore-min-1.8.3.js"></script>
+    <script src="lib/mathjs/math.min.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="styles/favicon.ico" type="image/x-icon"/>
+  </head>
+  <body ng-controller="MainController">
+
+    <div ui-view="all"></div>
+
+    <div ui-view="query"></div>
+
+    <div ui-view="sample"></div>
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="controllers/AllController.js"></script>
+    <script src="controllers/QueryController.js"></script>
+    <script src="controllers/SampleController.js"></script>
+    <script src="app.js"></script>
+    <script>$(app.init());</script>
+  </body>
+</html>
